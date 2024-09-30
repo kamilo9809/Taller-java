@@ -16,7 +16,7 @@ public class App {
         listaDeLibros.add(libro1);
         listaDeLibros.add(libro2);
 
-        System.out.println("hay un total de "+listaDeLibros.size()+" libros");
+         
 
         // Crear usuario
         Usuario usuario = new Usuario("Juan", "Pérez");
