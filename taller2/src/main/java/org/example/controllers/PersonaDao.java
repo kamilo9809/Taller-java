@@ -72,14 +72,8 @@ public class PersonaDao {
         try(Session session = databaseConnection.getSession()){
             transaction = session.beginTransaction();
             Persona persona = session.get(Persona.class, id);
-            Usuario usuario = session.get(Usuario.class, id );
-            Libro libro = session.get(Libro.class, id);
-            Prestamo prestamo = session.get(Prestamo.class, id);
             if (persona != null){
                 session.delete(persona);
-                session.delete(usuario);
-                session.delete(libro);
-                session.delete(prestamo);
                 transaction.commit();
             }
         }catch (Exception e){
